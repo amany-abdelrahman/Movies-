@@ -1,0 +1,96 @@
+
+
+npx create-react-app demo1 
+
+
+Angular --> NPM --> 9, 10  
+
+React --> NPX --> 17.3, 17.5 
+
+
+
+npm  --> Node Package Manager  --> install node 
+
+npx  --> Node Package eXecute
+
+
+1- install node 
+2- make sure --> open terminal --> node --version 
+3- npx create-react-app APPNAME (hint: app name must be small letter)
+4- cd APPNAME
+5- npm start 
+
+
+
+
+our own components: 
+
+    1- class: 
+
+            1- method life cycle: 
+                    constructor 
+                    componentDidMount 
+                    render
+                    componentDidUpdate 
+                    componentWillUnmount
+
+            2- state    setState
+
+            3- props 
+
+    2- function: --> hooks: 
+                1- useState  --> (state, setState)
+
+                const["VARNAME", "setVARNAME"] = useState("VALUE")
+
+
+                2- method life cycle --> useEffect 
+
+                        1- componentDidMount 
+                                useEffect(() => {},[])
+
+
+                        2- componentDidUpdate 
+                                useEffect(() => {},[STATE])
+
+                        3- componentWillUnmount
+                                useEffect(() => {
+                                        return{}
+                                },[])
+____________________________________________
+FORM (native way): 
+
+1- create form (UI library (bootstrap, MUI, ...))
+2- create state to control inputs (save data)
+3- add to each input (name, onChange, value )
+4- Define onChange function
+5- change function --> setVARNAME 
+6- create state for error msgs to handle validation 
+7- set validation rules 
+8- Define errors in JSX code 
+
+---------------------------------
+
+1- npm install react-router-dom@5 
+2- in App.js --> import BrowserRouter, Switch, Route 
+3- <BrowserRouter> 
+        <Switch> 
+                <Route exact path={"/"}  component={Main} />  
+                <Route exact path={"/home"}  component={Home} />
+        </Switch>  
+</BrowserRouter>
+
+4- make your navbar component and use <Link> insted of <a> 
+        <Link to="path"> </Link> 
+
+5- in App.js wrap your navbar component inside <BrowserRouter> 
+6- add route * --> not found 
+7- props --> history, location, match 
+        function component: 
+                hooks :
+                        useLocation
+                        useParams
+                        useHistory 
+                        useRouteMatch
+                props: 
+                        history, location, match
